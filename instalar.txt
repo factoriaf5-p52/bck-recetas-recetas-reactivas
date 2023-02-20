@@ -1,0 +1,35 @@
+nest
+mongo
+swagger
+mongoose
+mongo atlas
+eslint
+
+npm i @nestjs/mongoose mongoose 
+npm i @nestjs/swagger swagger-ui-express
+
+configurar swagger:
+main.ts 
+
+app.setGlobalPrefix("api/v1")
+const options = new DocumentBuilder()
+.setTitle("LA RECETTE API")
+.setDescription("API rest para la recipe en mongodb")
+.setVersion("1.0")
+.build()
+const document = SwaggerModule.createDocument(app, options)
+SwaggerModule.setup("docs", document);
+
+mongo:
+
+@module imports: MongooseModule.forRoot("mongodb://127.0.0.1:27017/recipe"),
+
+schemas:
+import,
+@Schema()
+
+nest g resource
+
+min 30
+
+mongoose --> hooks (middleware)
